@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Content/UI/LevelSelectionUSS.uss?fileID=7433441132597879392&amp;guid=41aa2ba1b6d35ed42b98af577f7e4419&amp;type=3#LevelSelectionUSS" />
+    <Style src="project://database/Assets/_Content/UI/LevelElementUSS.uss?fileID=7433441132597879392&amp;guid=b44bddff0cd295741966a9683b9d454d&amp;type=3#LevelElementUSS" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="LevelSelectionLabel" class="ui-label" />
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:VisualElement name="LevelsGridContainer" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; padding-left: 100px; padding-right: 100px; padding-bottom: 0; padding-top: 50px; justify-content: space-between;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

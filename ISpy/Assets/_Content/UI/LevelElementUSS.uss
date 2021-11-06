@@ -1,0 +1,46 @@
+.ui-button {
+    flex-grow: 1;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.ui-image {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 255);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.ui-levelLabel {
+    font-size: 32px;
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-text-align: upper-center;
+}
+
+.ui-levelElement {
+    width: 500px;
+    height: 400px;
+}
+
+.ui-levelLockLabel {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.5);
+    -unity-font-style: italic;
+}

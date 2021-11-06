@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="LevelElement" class="ui-levelElement" style="justify-content: space-between;">
+        <ui:Button display-tooltip-when-elided="true" focusable="false" name="LevelButton" class="ui-button">
+            <ui:VisualElement name="LevelImage" class="ui-image" />
+        </ui:Button>
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="LevelLabel" class="ui-levelLabel" style="height: 70px;" />
+        <ui:VisualElement name="LevelLock" style="position: absolute; width: 500px; height: 325px; border-top-left-radius: 21px; border-bottom-left-radius: 21px; border-top-right-radius: 21px; border-bottom-right-radius: 21px; background-color: rgba(0, 0, 0, 0.5); display: none;">
+            <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="LevelLockLabel" class="ui-levelLockLabel" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
