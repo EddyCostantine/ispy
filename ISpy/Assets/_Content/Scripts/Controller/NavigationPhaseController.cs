@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class NavigationPhaseController
 {
     public static Stack<NavigationPhaseModel.NavigationPhase> navigationPhaseStack = new Stack<NavigationPhaseModel.NavigationPhase>();
-    public static UnityEvent OnNavigationPhaseUpdate;
+    public static UnityEvent OnNavigationPhaseUpdate = new UnityEvent();
 
     public static NavigationPhaseModel.NavigationPhase GetCurrentNavigationPhase()
     {
