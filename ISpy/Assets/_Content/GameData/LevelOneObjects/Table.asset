@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f19a489bf2dacf4a842ce3d49e7f149, type: 3}
+  m_Name: Table
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 2803530938579133470, guid: c2c9d020f4e67ae4b83c54faa410ad9e, type: 3}
+  - {fileID: 7908459327875329471, guid: 12052b0eb059abf42a1c6ce6208507dc, type: 3}
+  objectVFX: {fileID: 0}
+  selectClip: {fileID: 0}
+  outlineColor: {r: 1, g: 0.7863691, b: 0.3726415, a: 1}
+  objectName: key_TableName
+  objectDescription: Key_TableDescription
+  objectHints:
+  - key_TableHint1
+  rewardPoints: 10

@@ -14,12 +14,13 @@ GameObject:
   - component: {fileID: 3541619043127364172}
   - component: {fileID: 5352206670831905945}
   - component: {fileID: 2347153201604731602}
+  - component: {fileID: -6547205919573382059}
   m_Layer: 0
   m_Name: SM_Playground_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3542139207211297327
 Transform:
@@ -31,6 +32,7 @@ Transform:
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -52.7757, y: 9.303212, z: -19.133501}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,10 +56,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,6 +86,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &3541619043127364172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121,3 +126,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.170073, y: 1.849704, z: 0.66944337}
   m_Center: {x: 0.9357827, y: 0.9216399, z: -1.8666234e-16}
+--- !u!114 &-6547205919573382059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4207457694302367893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6b02f5d37e31143b526cc5c1f4a211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectableObjectData: {fileID: 11400000, guid: f54c544fc0beca446a0198feb36ac598, type: 2}

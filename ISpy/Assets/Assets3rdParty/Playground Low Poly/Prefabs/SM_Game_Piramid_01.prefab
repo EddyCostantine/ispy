@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 6390345726656773745}
   - component: {fileID: 9172678904532372155}
   - component: {fileID: 3152387587662089680}
+  - component: {fileID: 5238717146312907244}
   m_Layer: 0
   m_Name: SM_Game_Piramid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7998615047934898644
 Transform:
@@ -29,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -57.378826, y: 9.31552, z: -19.10898}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,10 +54,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &3152387587662089680
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -93,3 +98,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.2422972
   m_Center: {x: 0.00000011920929, y: 0.3481581, z: -0.00000047683716}
+--- !u!114 &5238717146312907244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7226899359155137390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6b02f5d37e31143b526cc5c1f4a211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectableObjectData: {fileID: 11400000, guid: dfc03b16c5f574349ad1048217a85533, type: 2}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f19a489bf2dacf4a842ce3d49e7f149, type: 3}
+  m_Name: Ball
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 7242903740819944664, guid: 123108f0796252d40b1537d7a2b37dae, type: 3}
+  - {fileID: 3487769888083033031, guid: a6f5b2e09e2cfec45b1803180ac584d5, type: 3}
+  objectVFX: {fileID: 0}
+  selectClip: {fileID: 0}
+  outlineColor: {r: 0.24056602, g: 0.45181748, b: 1, a: 1}
+  objectName: key_BallName
+  objectDescription: Key_BallDescription
+  objectHints:
+  - key_BallHint1
+  rewardPoints: 10

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f19a489bf2dacf4a842ce3d49e7f149, type: 3}
+  m_Name: Bench
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 7190407247491102455, guid: ed1dfd226a8bf2f418f812b254707036, type: 3}
+  objectVFX: {fileID: 0}
+  selectClip: {fileID: 0}
+  outlineColor: {r: 1, g: 0.61620754, b: 0.21226418, a: 1}
+  objectName: key_BenchName
+  objectDescription: Key_BenchDescription
+  objectHints:
+  - key_BenchHint1
+  rewardPoints: 10
