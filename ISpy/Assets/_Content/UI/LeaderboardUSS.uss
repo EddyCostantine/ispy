@@ -1,0 +1,63 @@
+.ui-background {
+    background-color: rgb(255, 255, 255);
+    border-left-color: rgba(0, 0, 0, 0.5);
+    border-right-color: rgba(0, 0, 0, 0.5);
+    border-top-color: rgba(0, 0, 0, 0.5);
+    border-bottom-color: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+}
+
+.ui-button {
+    width: 305px;
+    height: 80px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-left-color: rgba(0, 0, 0, 0.16);
+    border-right-color: rgba(0, 0, 0, 0.16);
+    border-top-color: rgba(0, 0, 0, 0.16);
+    border-bottom-color: rgba(0, 0, 0, 0.16);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.ui-buttonLabel {
+    font-size: 45px;
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-text-align: middle-center;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.ui-Label {
+    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-font-definition: none;
+    font-size: 106px;
+    margin-top: 30px;
+    color: rgb(105, 123, 141);
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.24);
+    -unity-text-align: upper-center;
+}
+
+.ui-subText {
+    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-font-definition: none;
+    font-size: 50px;
+    margin-top: 10px;
+    color: rgb(105, 123, 141);
+    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.24);
+    -unity-text-align: upper-center;
+}

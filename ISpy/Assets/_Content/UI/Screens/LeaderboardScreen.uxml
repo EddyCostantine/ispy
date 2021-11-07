@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Content/UI/LeaderboardUSS.uss?fileID=7433441132597879392&amp;guid=ec804761854be1649b883c5acea5557e&amp;type=3#LeaderboardUSS" />
+    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:VisualElement class="ui-background" style="width: 1250px; height: 800px; justify-content: space-around;">
+            <ui:VisualElement style="margin-top: 50px;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="HighScoreLabel" class="ui-Label" />
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="HighScore" class="ui-subText" />
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="ScoreLabel" class="ui-Label" />
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="Score" class="ui-subText" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; justify-content: center; margin-top: 50px;">
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="LevelSelectionButton" class="ui-button ui-buttonLabel" style="background-color: rgba(54, 172, 255, 255);" />
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="PlayAgainButton" class="ui-button ui-buttonLabel" style="background-color: rgba(129, 236, 77, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

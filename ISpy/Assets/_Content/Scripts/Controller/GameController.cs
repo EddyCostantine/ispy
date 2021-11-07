@@ -4,10 +4,12 @@ using UnityEngine.Events;
 
 public class GameController : MonoBehaviourSingleton<GameController>
 {
+    private bool isGameOver;
     private int levelIndex;
     private float playerScore = 0;
     private int playerHealth = 3;
     private string guessObjectStingMessage = "";
+    private Coroutine levelRoutine;
 
     public UnityEvent<int> OnHealthChanged = new UnityEvent<int>();
     public UnityEvent<float> OnPlayerScoreChanged = new UnityEvent<float>();
@@ -26,6 +28,38 @@ public class GameController : MonoBehaviourSingleton<GameController>
 
     [SerializeField] private Transform[] levelCamerasPositions;
 
+    public void StartLevel(int levelIndex, float duration)
+    {
+        this.levelIndex = levelIndex;
+
+        isGameOver = false;
+        LevelScenes[levelIndex].SetActive(true);
+        Camera.main.transform.position = levelCamerasPositions[levelIndex].position;
+        Camera.main.transform.rotation = levelCamerasPositions[levelIndex].rotation;
+
+        OnHealthChanged.AddListener(HealthChangeCheck);
+        OnTimerChanged.AddListener(TimerChangeCheck);
+
+        levelRoutine = StartCoroutine(StartTimedLevel(duration));
+    }
+    private IEnumerator StartTimedLevel(float duration)
+    {
+        yield return new WaitForSeconds(1);
+
+        PickRandomObject();
+
+        CoroutineWithData coroutineReturnData = new CoroutineWithData(this, Helpers.CountdownTimer(duration));
+
+        while ((float)coroutineReturnData.result > 0)
+        {
+            OnTimerChanged.Invoke((float)coroutineReturnData.result);
+
+            UpdateSelectedObject();
+            UpdateCameraRotation();
+
+            yield return null;
+        }
+    }
     private ObjectData GetRandomObjectData()
     {
         int randomObjectIndex = -1;
@@ -65,34 +99,7 @@ public class GameController : MonoBehaviourSingleton<GameController>
 
         return string.Join("", formattedNameArray);
     }
-    public void StartLevel(int levelIndex, float duration)
-    {
-        this.levelIndex = levelIndex;
-        
-        LevelScenes[levelIndex].SetActive(true);
-        Camera.main.transform.position = levelCamerasPositions[levelIndex].position;
-        Camera.main.transform.rotation = levelCamerasPositions[levelIndex].rotation;
 
-        StartCoroutine(StartTimedLevel(duration));
-    }
-    private IEnumerator StartTimedLevel(float duration)
-    {
-        yield return new WaitForSeconds(1);
-
-        PickRandomObject();
-
-        CoroutineWithData coroutineReturnData = new CoroutineWithData(this, Helpers.CountdownTimer(duration));
-
-        while ((float)coroutineReturnData.result > 0)
-        {
-            OnTimerChanged.Invoke((float)coroutineReturnData.result);
-
-            UpdateSelectedObject();
-            UpdateCameraRotation();
-
-            yield return null;
-        }
-    }
     public void ValidateSelection()
     {
         Debug.Log("VALIDATE");
@@ -122,6 +129,8 @@ public class GameController : MonoBehaviourSingleton<GameController>
             OnPlayerScoreChanged.Invoke(playerScore);
             OnHealthChanged.Invoke(playerHealth);
         }
+        currentSelectedObject.ToggleOutline(false);
+        currentSelectedObject = null;
     }
     private void PickRandomObject()
     {
@@ -156,6 +165,36 @@ public class GameController : MonoBehaviourSingleton<GameController>
         }
     }
 
+    private void TimerChangeCheck(float arg0)
+    {
+        Debug.Log(arg0);
+        if (arg0 <= 0.1f)
+        {
+            EndGame();
+        }
+    }
+    private void HealthChangeCheck(int arg0)
+    {
+        if (arg0 < 0)
+        {
+            EndGame();
+        }
+    }
+    private void EndGame()
+    {
+        if (!isGameOver)
+        {
+            isGameOver = true;
+            Debug.Log("Game Over!");
+            levelRoutine = null;
+            PlayerPrefs.SetFloat("CurrentScore", playerScore);
+            if (playerScore > PlayerPrefs.GetFloat("HighScore"))
+                PlayerPrefs.SetFloat("HighScore", playerScore);
+
+            NavigationPhaseController.NextNavigationPhase();
+        }
+    }
+
     private void UpdateCameraRotation()
     {
         if (Input.GetMouseButton(1))
@@ -163,6 +202,12 @@ public class GameController : MonoBehaviourSingleton<GameController>
             Vector3 rotateValue = new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X") * -1, 0);
             Camera.main.transform.eulerAngles = Camera.main.transform.eulerAngles - rotateValue;
         }
+    }
+
+    private void OnDisable()
+    {
+        OnHealthChanged.RemoveListener(HealthChangeCheck);
+        OnTimerChanged.RemoveListener(TimerChangeCheck);
     }
 }
 

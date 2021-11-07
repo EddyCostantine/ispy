@@ -39,4 +39,12 @@ public class GameUIPresenter
     {
         GameController.Instance.ValidateSelection();
     }
+
+    ~GameUIPresenter()
+    {
+        GameController.Instance.OnHealthChanged.RemoveListener(UpdateHealth);
+        GameController.Instance.OnPlayerScoreChanged.RemoveListener(UpdateScore);
+        GameController.Instance.OnTimerChanged.RemoveListener(UpdateTimer);
+        GameController.Instance.OnGuessMessageChanged -= UpdateISpyMessage;
+    }
 }

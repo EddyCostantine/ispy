@@ -20,6 +20,10 @@
 "key_TimerLabel","Time remaining","Verbleibende Zeit"
 "key_ScoreLabel","Score","Spielstand"
 
+"key_HighScoreLabel","HighScore","HighScore"
+"key_LevelSelectionButton","Select Level","Stufe auswählen"
+"key_PlayAgainButton","Play again!","Nochmal abspielen!"
+
 "key_TreeName","Tree","Baum"
 "Key_TreeDescription","A tree is a tall plant with a trunk and branches made of wood","Ein Baum ist eine hohe Pflanze mit einem Stamm und Ästen aus Holz"
 "key_TreeHint1","Tall","Hoch"
