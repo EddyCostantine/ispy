@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -60,4 +61,52 @@ public class Helpers
         }
         return dictionary;
     }
+
+    public static IEnumerator CountdownTimer(float duration)
+    {
+        float timeRemaining = duration;
+        bool timerIsRunning = true;
+        while (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+
+            yield return timeRemaining;
+        }
+    }
+    public static string FormatDisplayTime(float timeToDisplay)
+    {
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
 }
+public class CoroutineWithData
+{
+    public Coroutine coroutine { get; private set; }
+    public object result;
+    private IEnumerator target;
+    public CoroutineWithData(MonoBehaviour owner, IEnumerator target)
+    {
+        this.target = target;
+        this.coroutine = owner.StartCoroutine(Run());
+    }
+
+    private IEnumerator Run()
+    {
+        while (target.MoveNext())
+        {
+            result = target.Current;
+            yield return result;
+        }
+    }
+}
+

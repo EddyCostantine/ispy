@@ -12,6 +12,14 @@
 "key_lvl02_levelLabel","Farm","Bauernhof"
 "key_lvl03_levelLabel","City","Stadt"
 "key_lvl04_levelLabel","School","Schule"
+
+"key_ISpyLabel","I spy with my little eye","Ich sehe was, was du nicht siehst"
+"key_HintButton","Hint","Hinweis"
+"key_ValidateButton","Validate","Bestätigen"
+"key_GameMessageLabel","Choose an object to validate","Wählen Sie ein zu validierendes Objekt aus"
+"key_TimerLabel","Time remaining","Verbleibende Zeit"
+"key_ScoreLabel","Score","Spielstand"
+
 "key_TreeName","Tree","Baum"
 "Key_TreeDescription","A tree is a tall plant with a trunk and branches made of wood","Ein Baum ist eine hohe Pflanze mit einem Stamm und Ästen aus Holz"
 "key_TreeHint1","Tall","Hoch"

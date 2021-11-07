@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slide
   m_EditorClassIdentifier: 
   objectPrefabs:
-  - {fileID: 207510570429624245, guid: 9fc0d344e6ba1574183600c17ba78f3b, type: 3}
+  - {fileID: 4207457694302367893, guid: 7a9b12c91eb11314eb8dbbeeb81b7593, type: 3}
   objectVFX: {fileID: 0}
   selectClip: {fileID: 0}
   outlineColor: {r: 1, g: 0.2688679, b: 0.2688679, a: 1}

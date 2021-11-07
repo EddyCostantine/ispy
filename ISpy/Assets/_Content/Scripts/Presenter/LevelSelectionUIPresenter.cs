@@ -13,6 +13,8 @@ public class LevelSelectionUIPresenter : MonoBehaviour
     internal void HandleLevelClicked(VisualElement levelTemplateClone, int index)
     {
         Debug.Log("Go to level: " + index);
+        PlayerPrefs.SetInt("desiredLevel", index);
+        NavigationPhaseController.NextNavigationPhase();
     }
 
     public void SearchLevels()

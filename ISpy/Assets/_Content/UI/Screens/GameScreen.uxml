@@ -1,9 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Content/UI/GameUSS.uss?fileID=7433441132597879392&amp;guid=f782161c89f0e2247ad0e961e8d6cc72&amp;type=3#GameUSS" />
+    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse; align-items: center;">
+        <ui:VisualElement class="ui-background" style="width: 1500px; height: 225px; top: 50px;">
+            <ui:VisualElement class="ui-background" style="width: 780px; height: 331px; top: -88px; position: absolute; left: 600px;">
+                <ui:VisualElement style="height: 242px; padding-left: 25px; padding-right: 25px; padding-bottom: 15px;">
+                    <ui:VisualElement name="MessageContainer" style="height: 150px; flex-grow: 1;">
+                        <ui:Label text="Label" display-tooltip-when-elided="true" name="MessageLabel" class="ui-Label" style="-unity-text-align: upper-center;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ButtonContainer" style="flex-direction: row; justify-content: center;">
+                        <ui:Button text="label" display-tooltip-when-elided="true" name="HintButton" class="ui-button ui-buttonLabel" style="background-color: rgba(233, 176, 76, 255);" />
+                        <ui:Button text="label" display-tooltip-when-elided="true" name="ValidateButton" class="ui-button ui-buttonLabel" style="background-color: rgba(55, 250, 70, 255);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="position: absolute; height: 166px; width: 102px; top: 0; left: 1381px; justify-content: space-around; flex-direction: column; align-items: center;">
+                <ui:VisualElement name="HeartOne" class="ui-heartBG" />
+                <ui:VisualElement name="HeartTwo" class="ui-heartBG" />
+                <ui:VisualElement name="HeartThree" class="ui-heartBG" />
+            </ui:VisualElement>
+            <ui:VisualElement style="position: absolute; height: 167px; width: 598px; padding-left: 25px; padding-right: 25px;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="ISpyLabel" class="ui-Label" />
+            </ui:VisualElement>
+            <ui:VisualElement style="position: absolute; height: 68px; width: 598px; top: -79px;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="TimerLabel" class="ui-subText" />
+            </ui:VisualElement>
+            <ui:VisualElement style="position: absolute; height: 68px; width: 598px; top: -155px; left: 687px; -unity-text-align: middle-center;">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="ScoreLabel" class="ui-subText" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
