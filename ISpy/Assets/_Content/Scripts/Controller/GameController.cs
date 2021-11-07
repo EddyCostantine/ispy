@@ -24,6 +24,8 @@ public class GameController : MonoBehaviourSingleton<GameController>
 
     [SerializeField] private GameObject[] LevelScenes;
 
+    [SerializeField] private Transform[] levelCamerasPositions;
+
     private ObjectData GetRandomObjectData()
     {
         int randomObjectIndex = -1;
@@ -66,7 +68,11 @@ public class GameController : MonoBehaviourSingleton<GameController>
     public void StartLevel(int levelIndex, float duration)
     {
         this.levelIndex = levelIndex;
+        
         LevelScenes[levelIndex].SetActive(true);
+        Camera.main.transform.position = levelCamerasPositions[levelIndex].position;
+        Camera.main.transform.rotation = levelCamerasPositions[levelIndex].rotation;
+
         StartCoroutine(StartTimedLevel(duration));
     }
     private IEnumerator StartTimedLevel(float duration)
@@ -81,7 +87,8 @@ public class GameController : MonoBehaviourSingleton<GameController>
         {
             OnTimerChanged.Invoke((float)coroutineReturnData.result);
 
-            CheckIfSceneObjectSelected();
+            UpdateSelectedObject();
+            UpdateCameraRotation();
 
             yield return null;
         }
@@ -126,7 +133,7 @@ public class GameController : MonoBehaviourSingleton<GameController>
 
         Debug.Log(guessObjectStingMessage);
     }
-    private void CheckIfSceneObjectSelected()
+    private void UpdateSelectedObject()
     {
         if (Input.mousePosition.y < 130) return;//HACK new UI system not blocking raycasts.. Dirty hack to save time
         if (Input.GetMouseButtonDown(0))
@@ -146,6 +153,15 @@ public class GameController : MonoBehaviourSingleton<GameController>
                     Debug.Log("Hit: " + Localisation.GetLocalisedValue(currentSelectedObject.selectableObjectData.objectName));
                 }
             }
+        }
+    }
+
+    private void UpdateCameraRotation()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            Vector3 rotateValue = new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X") * -1, 0);
+            Camera.main.transform.eulerAngles = Camera.main.transform.eulerAngles - rotateValue;
         }
     }
 }
