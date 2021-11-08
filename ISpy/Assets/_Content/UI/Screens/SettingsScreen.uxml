@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Content/UI/SplashUSS.uss?fileID=7433441132597879392&amp;guid=291292e9ad5866042b3539822d61345d&amp;type=3#SplashUSS" />
+    <Style src="project://database/Assets/_Content/UI/SettingsUSS.uss?fileID=7433441132597879392&amp;guid=9cd4511211579cc46a1fcce581bcd88c&amp;type=3#SettingsUSS" />
+    <ui:VisualElement class="ui-BG" style="width: 1920px; height: 1080px; flex-grow: 1; justify-content: center; align-items: center;">
+        <ui:VisualElement class="ui-Background" style="width: 1250px; height: 800px; justify-content: space-around; align-items: center;">
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="SettingsLabel" class="ui-Label" style="font-size: 60px;" />
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="LanguageLabel" class="ui-subText" />
+            <ui:VisualElement style="flex-direction: row; justify-content: center;">
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="EnglishButton" class="ui-button ui-buttonLabel" style="background-color: rgba(61, 147, 253, 255);" />
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="GermanButton" class="ui-button ui-buttonLabel" style="background-color: rgba(209, 80, 39, 255);" />
+            </ui:VisualElement>
+            <ui:Toggle label="Toggle" name="FullScreenToggle" focusable="false" value="true" class="ui-toggleLabel" />
+            <ui:Toggle label="Toggle" name="MuteToggle" focusable="false" class="ui-toggleLabel" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="BackButton" class="ui-button ui-buttonLabel" style="background-color: rgb(217, 141, 56); left: -440px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

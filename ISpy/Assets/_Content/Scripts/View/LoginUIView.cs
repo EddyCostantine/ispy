@@ -15,6 +15,7 @@ public class LoginUIView : MonoBehaviour
     private Label showPassword;
     private Button signUpButton;
     private Button signInButton;
+    private Button settingsButton;
 
     private void OnEnable()
     {
@@ -30,6 +31,7 @@ public class LoginUIView : MonoBehaviour
         showPassword = root.Q<Label>("ShowPasswordLabel");
         signUpButton = root.Q<Button>("SignUpButton");
         signInButton = root.Q<Button>("SignInButton");
+        settingsButton = root.Q<Button>("SettingsButton");
 
         errorMessageLabel.text = Localisation.GetLocalisedValue("key_SignInErrorMessage");
         usernameLabel.text = Localisation.GetLocalisedValue("key_Username");
@@ -37,8 +39,11 @@ public class LoginUIView : MonoBehaviour
         showPassword.text = Localisation.GetLocalisedValue("key_ShowPassword");
         signUpButton.Q<Label>("Label").text = Localisation.GetLocalisedValue("key_SignUp");
         signInButton.Q<Label>("Label").text = Localisation.GetLocalisedValue("key_SignIn");
+        settingsButton.text = Localisation.GetLocalisedValue("key_SettingsLabel");
+
         signInButton.clicked += OnSignInButtonClicked;
         signUpButton.clicked += OnSignUpButtonClicked;
+        settingsButton.clicked += OnSettingsButtonClicked;
 
         usernameInputField.RegisterCallback<ChangeEvent<string>>(OnUsernameTextChanged);
         passwordInputField.RegisterCallback<ChangeEvent<string>>(OnPasswordTextChanged);
@@ -46,6 +51,12 @@ public class LoginUIView : MonoBehaviour
 
         DisableSignInButton();
     }
+
+    private void OnSettingsButtonClicked()
+    {
+        presenter.HandleSettingsButtonClicked();
+    }
+
     private void OnTogglePasswordVisibility(ClickEvent evt)
     {
         passwordInputField.isPasswordField = !passwordInputField.isPasswordField;

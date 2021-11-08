@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class LoginUIPresenter
@@ -54,5 +55,10 @@ public class LoginUIPresenter
         view.ShowErrorMessage();
         view.ShowErrorBorders();
         view.GreyOutLogin();
+    }
+
+    internal void HandleSettingsButtonClicked()
+    {
+        NavigationPhaseController.SetCurrentNavigationPhase(NavigationPhaseModel.NavigationPhase.Settings);
     }
 }

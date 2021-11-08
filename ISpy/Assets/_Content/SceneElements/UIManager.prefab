@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591177434}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.0367577, y: 3.6778147, z: 3.238917}
+  m_LocalPosition: {x: -2.0367577, y: 5, z: 3.238917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -592,6 +592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4089008653299511474}
   - component: {fileID: 8631457179926015086}
+  - component: {fileID: 4344764794904811697}
   m_Layer: 0
   m_Name: SettingsScreen
   m_TagString: Untagged
@@ -630,3 +631,15 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 689b3a0ab7c898642bd1d80958831566, type: 3}
   m_SortingOrder: 0
+--- !u!114 &4344764794904811697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821836464745790706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad26ae94ad0dbe4e93cf902be6dbf6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

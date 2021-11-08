@@ -4,5 +4,6 @@
     <Style src="project://database/Assets/_Content/UI/SplashUSS.uss?fileID=7433441132597879392&amp;guid=291292e9ad5866042b3539822d61345d&amp;type=3#SplashUSS" />
     <ui:VisualElement class="ui-BG" style="flex-grow: 1; justify-content: center; align-items: center;">
         <ui:Instance template="PopupTemplate" name="UIPopupTemplate" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="SettingsButton" class="ui-button ui-buttonLabel" style="background-color: rgba(221, 135, 39, 255); left: 1500px; top: 80px;" />
     </ui:VisualElement>
 </ui:UXML>

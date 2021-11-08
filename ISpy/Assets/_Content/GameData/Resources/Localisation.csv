@@ -24,6 +24,14 @@
 "key_LevelSelectionButton","Select Level","Stufe auswählen"
 "key_PlayAgainButton","Play again!","Nochmal abspielen!"
 
+"key_SettingsLabel","Settings","Einstellungen"
+"key_LanguageLabel","Language","Sprache"
+"key_ButtonBack","Back","Zurück"
+"key_ButtonEnglish","English","Englisch"
+"key_ButtonGerman","German","Detusch"
+"key_FullScreenToggle","Full Screen",Vollbildschirm
+"key_MuteToggle","Mute","Stumm"
+
 "key_TreeName","Tree","Baum"
 "Key_TreeDescription","A tree is a tall plant with a trunk and branches made of wood","Ein Baum ist eine hohe Pflanze mit einem Stamm und Ästen aus Holz"
 "key_TreeHint1","Tall","Hoch"

@@ -36,37 +36,21 @@
 }
 
 .ui-buttonLabel {
-    font-size: 40px;
+    font-size: 45px;
     -unity-font-definition: none;
     -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
     -unity-text-align: middle-center;
     color: rgb(255, 255, 255);
     text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.5);
-    position: absolute;
 }
 
-.ui-textField > #unity-text-input {
-    height: 100px;
-    border-top-left-radius: 37px;
-    border-bottom-left-radius: 37px;
-    border-top-right-radius: 37px;
-    border-bottom-right-radius: 37px;
-    background-color: rgb(210, 210, 210);
-    border-left-width: 4px;
-    border-right-width: 4px;
-    border-top-width: 4px;
-    border-bottom-width: 4px;
-    border-left-color: rgba(0, 0, 0, 0.16);
-    border-right-color: rgba(0, 0, 0, 0.16);
-    border-top-color: rgba(0, 0, 0, 0.16);
-    border-bottom-color: rgba(0, 0, 0, 0.16);
-    width: 400px;
-    margin-top: 5px;
+.ui-subText {
     -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
     -unity-font-definition: none;
-    font-size: 60px;
-    -unity-text-align: middle-center;
-    color: rgba(0, 36, 72, 0.5);
+    font-size: 45px;
+    margin-top: 10px;
+    color: rgb(105, 123, 141);
+    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
 .ui-Label {
@@ -78,11 +62,11 @@
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.24);
 }
 
-.ui-subText {
-    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+.ui-toggleLabel {
+    font-size: 45px;
     -unity-font-definition: none;
-    font-size: 25px;
-    margin-top: 10px;
+    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-text-align: middle-center;
     color: rgb(105, 123, 141);
-    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.24);
+    text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.5);
 }
