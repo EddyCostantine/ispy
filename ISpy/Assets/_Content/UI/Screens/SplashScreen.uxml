@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="SplashContainer" style="align-items: center; justify-content: center; flex-grow: 1;">
-        <ui:Label text="Splash!" display-tooltip-when-elided="true" style="-unity-font-definition: none; -unity-font: url(&apos;project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&amp;guid=2b5ca9280ad03a344aeb4828815ca783&amp;type=3#Gaffuk&apos;); font-size: 171px;" />
+    <Style src="project://database/Assets/_Content/UI/SplashUSS.uss?fileID=7433441132597879392&amp;guid=291292e9ad5866042b3539822d61345d&amp;type=3#SplashUSS" />
+    <ui:VisualElement name="SplashContainer" class="ui-BG" style="align-items: flex-start; justify-content: flex-start; flex-grow: 1; flex-direction: column-reverse;">
+        <ui:Label text="I Spy!" display-tooltip-when-elided="true" style="-unity-font-definition: none; -unity-font: url(&apos;project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&amp;guid=2b5ca9280ad03a344aeb4828815ca783&amp;type=3#Gaffuk&apos;); font-size: 239px; color: rgb(255, 255, 255); text-shadow: 14px 9px 9px rgba(0, 0, 0, 0.63); -unity-text-align: middle-center; left: 300px; bottom: 267px;" />
     </ui:VisualElement>
 </ui:UXML>

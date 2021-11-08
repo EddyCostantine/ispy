@@ -1,6 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="PopupTemplate" src="project://database/Assets/_Content/UI/Templates/PopupTemplate.uxml?fileID=9197481963319205126&amp;guid=3a9123b502984554ea416fa637d957e9&amp;type=3#UIPopupTemplate" />
-    <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
+    <ui:Template name="PopupTemplate" src="project://database/Assets/_Content/UI/Templates/PopupTemplate.uxml?fileID=9197481963319205126&amp;guid=3a9123b502984554ea416fa637d957e9&amp;type=3#PopupTemplate" />
+    <Style src="project://database/Assets/_Content/UI/PopupUSS.uss?fileID=7433441132597879392&amp;guid=b3a5760168ee3894f8982dec76ed3d2e&amp;type=3#PopupUSS" />
+    <Style src="project://database/Assets/_Content/UI/SplashUSS.uss?fileID=7433441132597879392&amp;guid=291292e9ad5866042b3539822d61345d&amp;type=3#SplashUSS" />
+    <ui:VisualElement class="ui-BG" style="flex-grow: 1; justify-content: center; align-items: center;">
         <ui:Instance template="PopupTemplate" name="UIPopupTemplate" />
     </ui:VisualElement>
 </ui:UXML>
