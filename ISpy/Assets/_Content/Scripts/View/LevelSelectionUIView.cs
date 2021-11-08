@@ -37,7 +37,7 @@ public class LevelSelectionUIView : MonoBehaviour
 
             levelTemplateClone.Q<Label>("LevelLabel").text = Localisation.GetLocalisedValue(levelModels[i].levelLabel);
             levelTemplateClone.Q<Label>("LevelLockLabel").text = Localisation.GetLocalisedValue("key_LevelLockedLabel");
-            levelTemplateClone.Q<VisualElement>("LevelImage");//TODO load image from resources
+            levelTemplateClone.Q<VisualElement>("LevelImage").style.backgroundImage = Resources.Load<Texture2D>($"LevelSnapshots/{levelModels[i].levelImageURL}");
             int tempindex = i;//Passing i directly results in i = levelModels.Length for all buttons
             levelTemplateClone.Q<Button>("LevelButton").clicked += () => { presenter.HandleLevelClicked(levelTemplateClone, tempindex); };
             if (levelModels[i].locked)

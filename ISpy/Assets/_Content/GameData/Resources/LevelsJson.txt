@@ -4,25 +4,25 @@
 			"levelId": "lvl01",
 			"levelLabel": "key_lvl01_levelLabel",
 			"locked": false,
-			"levelImageURL": ""
+			"levelImageURL": "LevelOne"
 		},
 				{
 			"levelId": "lvl02",
 			"levelLabel": "key_lvl02_levelLabel",
 			"locked": false,
-			"levelImageURL": ""
+			"levelImageURL": "LevelTwo"
 		},
 				{
 			"levelId": "lvl03",
 			"levelLabel": "key_lvl03_levelLabel",
 			"locked": true,
-			"levelImageURL": ""
+			"levelImageURL": "LevelThree"
 		},
 		{
 			"levelId": "lvl04",
 			"levelLabel": "key_lvl04_levelLabel",
 			"locked": true,
-			"levelImageURL": ""
+			"levelImageURL": "LevelFour"
 		}
 	]
 }

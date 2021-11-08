@@ -8,7 +8,7 @@ public class GameUIPresenter
     {
         this.view = view;
 
-        GameController.Instance.StartLevel(PlayerPrefs.GetInt("desiredLevel"), 120.0f);//TODO Get duration from level json
+        GameController.Instance.StartLevel(PlayerPrefs.GetInt("DesiredLevel"), 120.0f);//TODO Get duration from level json
         GameController.Instance.OnHealthChanged.AddListener(UpdateHealth);
         GameController.Instance.OnPlayerScoreChanged.AddListener(UpdateScore);
         GameController.Instance.OnTimerChanged.AddListener(UpdateTimer);

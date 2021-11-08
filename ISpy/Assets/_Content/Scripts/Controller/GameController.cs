@@ -6,9 +6,9 @@ public class GameController : MonoBehaviourSingleton<GameController>
 {
     private bool isGameOver;
     private int levelIndex;
-    private float playerScore = 0;
-    private int playerHealth = 3;
-    private string guessObjectStingMessage = "";
+    private float playerScore;
+    private int playerHealth;
+    private string guessObjectStingMessage;
     private Coroutine levelRoutine;
 
     public UnityEvent<int> OnHealthChanged = new UnityEvent<int>();
@@ -31,9 +31,19 @@ public class GameController : MonoBehaviourSingleton<GameController>
     public void StartLevel(int levelIndex, float duration)
     {
         this.levelIndex = levelIndex;
-
         isGameOver = false;
-        LevelScenes[levelIndex].SetActive(true);
+        playerScore = 0;
+        playerHealth = 3;
+        guessObjectStingMessage = "";
+
+        for (int i = 0; i < LevelScenes.Length; i++)
+        {
+            if(i == this.levelIndex)
+                LevelScenes[i].SetActive(true);
+            else
+                LevelScenes[i].SetActive(false);
+        }
+        
         Camera.main.transform.position = levelCamerasPositions[levelIndex].position;
         Camera.main.transform.rotation = levelCamerasPositions[levelIndex].rotation;
 
@@ -59,6 +69,7 @@ public class GameController : MonoBehaviourSingleton<GameController>
 
             yield return null;
         }
+        levelRoutine = null;
     }
     private ObjectData GetRandomObjectData()
     {
@@ -167,7 +178,6 @@ public class GameController : MonoBehaviourSingleton<GameController>
 
     private void TimerChangeCheck(float arg0)
     {
-        Debug.Log(arg0);
         if (arg0 <= 0.1f)
         {
             EndGame();
@@ -186,10 +196,14 @@ public class GameController : MonoBehaviourSingleton<GameController>
         {
             isGameOver = true;
             Debug.Log("Game Over!");
+            StopCoroutine(levelRoutine);
             levelRoutine = null;
             PlayerPrefs.SetFloat("CurrentScore", playerScore);
             if (playerScore > PlayerPrefs.GetFloat("HighScore"))
                 PlayerPrefs.SetFloat("HighScore", playerScore);
+
+            OnHealthChanged.RemoveListener(HealthChangeCheck);
+            OnTimerChanged.RemoveListener(TimerChangeCheck);
 
             NavigationPhaseController.NextNavigationPhase();
         }
@@ -202,12 +216,6 @@ public class GameController : MonoBehaviourSingleton<GameController>
             Vector3 rotateValue = new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X") * -1, 0);
             Camera.main.transform.eulerAngles = Camera.main.transform.eulerAngles - rotateValue;
         }
-    }
-
-    private void OnDisable()
-    {
-        OnHealthChanged.RemoveListener(HealthChangeCheck);
-        OnTimerChanged.RemoveListener(TimerChangeCheck);
     }
 }
 

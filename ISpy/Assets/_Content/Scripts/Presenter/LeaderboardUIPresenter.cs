@@ -16,6 +16,7 @@ public class LeaderboardUIPresenter
     internal void HandlePlayAgainButtonClicked()
     {
         Debug.Log("Play Again");
+        GameController.Instance.StartLevel(PlayerPrefs.GetInt("DesiredLevel"),120.0f);
         NavigationPhaseController.SetCurrentNavigationPhase(NavigationPhaseModel.NavigationPhase.Game);
     }
 
