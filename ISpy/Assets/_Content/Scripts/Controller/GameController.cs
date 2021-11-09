@@ -217,5 +217,10 @@ public class GameController : MonoBehaviourSingleton<GameController>
             Camera.main.transform.eulerAngles = Camera.main.transform.eulerAngles - rotateValue;
         }
     }
+
+    public ObjectData GetCurrentSpyObjectData()
+    {
+        return computerSelectedObjectData;
+    }
 }
 

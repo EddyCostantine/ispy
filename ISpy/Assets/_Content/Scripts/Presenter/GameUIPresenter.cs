@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameUIPresenter
@@ -13,6 +15,7 @@ public class GameUIPresenter
         GameController.Instance.OnPlayerScoreChanged.AddListener(UpdateScore);
         GameController.Instance.OnTimerChanged.AddListener(UpdateTimer);
         GameController.Instance.OnGuessMessageChanged += UpdateISpyMessage;
+        GameController.Instance.OnGuessMessageChanged += delegate { view.ToogleHintButtonVisibility(true); };
     }
 
     private void UpdateISpyMessage(string arg0)
@@ -46,5 +49,18 @@ public class GameUIPresenter
         GameController.Instance.OnPlayerScoreChanged.RemoveListener(UpdateScore);
         GameController.Instance.OnTimerChanged.RemoveListener(UpdateTimer);
         GameController.Instance.OnGuessMessageChanged -= UpdateISpyMessage;
+        GameController.Instance.OnGuessMessageChanged -= delegate { view.ToogleHintButtonVisibility(true); };
+    }
+
+    internal void HandleHintButtonClicked()
+    {
+        ShowHint();
+    }
+
+    private void ShowHint()
+    {
+        view.ToogleHintButtonVisibility(false);
+        List<string> availableHints = GameController.Instance.GetCurrentSpyObjectData().objectHints;
+        view.SetHintLabel(Localisation.GetLocalisedValue(availableHints[UnityEngine.Random.Range(0, availableHints.Count)]));
     }
 }

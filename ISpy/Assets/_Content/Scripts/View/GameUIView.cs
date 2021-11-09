@@ -12,6 +12,7 @@ public class GameUIView : MonoBehaviour
     private Label iSpyLabel;
     private Label timerLabel;
     private Label scoreLabel;
+    private Label hintLabel;
     private VisualElement heartOne;
     private VisualElement heartTwo;
     private VisualElement heartThree;
@@ -26,6 +27,7 @@ public class GameUIView : MonoBehaviour
         iSpyLabel = root.Q<Label>("ISpyLabel");
         timerLabel = root.Q<Label>("TimerLabel");
         scoreLabel = root.Q<Label>("ScoreLabel");
+        hintLabel = root.Q<Label>("HintLabel");
         heartOne = root.Q<VisualElement>("HeartOne");
         heartTwo = root.Q<VisualElement>("HeartTwo");
         heartThree = root.Q<VisualElement>("HeartThree");
@@ -36,6 +38,7 @@ public class GameUIView : MonoBehaviour
         iSpyLabel.text = "";
         timerLabel.text = "";
         scoreLabel.text = "";
+        hintLabel.text = "";
 
         hintButton.clicked += OnHintButtonClicked;
         validateButton.clicked += OnValidateButtonClicked;
@@ -47,12 +50,15 @@ public class GameUIView : MonoBehaviour
     {
         presenter.ValidateCurrentSelection();
     }
-
     private void OnHintButtonClicked()
     {
-        throw new NotImplementedException();
+        presenter.HandleHintButtonClicked();
     }
 
+    public void ToogleHintButtonVisibility(bool isVisible)
+    {
+        hintButton.visible = isVisible;
+    }
     public void SetISpyLabel(string text)
     {
         iSpyLabel.text = text;
@@ -90,5 +96,9 @@ public class GameUIView : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void SetHintLabel(string text)
+    {
+        hintLabel.text = text;
     }
 }

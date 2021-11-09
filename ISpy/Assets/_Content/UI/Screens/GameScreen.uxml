@@ -4,12 +4,13 @@
         <ui:VisualElement class="ui-background" style="width: 1500px; height: 225px; top: 50px;">
             <ui:VisualElement class="ui-background" style="width: 780px; height: 331px; top: -88px; position: absolute; left: 600px;">
                 <ui:VisualElement style="height: 242px; padding-left: 25px; padding-right: 25px; padding-bottom: 15px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="HintLabel" class="ui-Label" style="position: absolute; top: 156px; left: 117px; height: 69px; width: 231px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
                     <ui:VisualElement name="MessageContainer" style="height: 150px; flex-grow: 1;">
                         <ui:Label text="Label" display-tooltip-when-elided="true" name="MessageLabel" class="ui-Label" style="-unity-text-align: upper-center;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ButtonContainer" style="flex-direction: row; justify-content: center;">
-                        <ui:Button text="label" display-tooltip-when-elided="true" name="HintButton" class="ui-button ui-buttonLabel" style="background-color: rgba(233, 176, 76, 255);" />
-                        <ui:Button text="label" display-tooltip-when-elided="true" name="ValidateButton" class="ui-button ui-buttonLabel" style="background-color: rgba(55, 250, 70, 255);" />
+                        <ui:Button text="label" display-tooltip-when-elided="true" name="HintButton" focusable="false" class="ui-button ui-buttonLabel" style="background-color: rgb(233, 176, 76);" />
+                        <ui:Button text="label" display-tooltip-when-elided="true" name="ValidateButton" focusable="false" class="ui-button ui-buttonLabel" style="background-color: rgb(55, 250, 70);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
