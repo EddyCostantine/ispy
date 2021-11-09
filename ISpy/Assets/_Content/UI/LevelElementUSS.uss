@@ -18,7 +18,7 @@
 
 .ui-image {
     flex-grow: 1;
-    background-color: rgba(255, 255, 255, 255);
+    background-color: rgb(255, 255, 255);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -26,9 +26,9 @@
 }
 
 .ui-levelLabel {
-    font-size: 32px;
+    font-size: 30px;
     -unity-font-definition: none;
-    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-font: url('project://database/Assets/_Content/Fonts/MochiyPopOne-Regular.ttf?fileID=12800000&guid=458b3684c7ea7ac468c5e126eb1537e0&type=3#MochiyPopOne-Regular');
     -unity-text-align: upper-center;
 }
 
@@ -39,8 +39,8 @@
 
 .ui-levelLockLabel {
     -unity-font-definition: none;
-    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
-    font-size: 80px;
+    -unity-font: url('project://database/Assets/_Content/Fonts/MochiyPopOne-Regular.ttf?fileID=12800000&guid=458b3684c7ea7ac468c5e126eb1537e0&type=3#MochiyPopOne-Regular');
+    font-size: 70px;
     color: rgba(255, 255, 255, 0.5);
     -unity-font-style: italic;
 }

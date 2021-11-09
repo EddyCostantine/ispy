@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Content/UI/LevelElementUSS.uss?fileID=7433441132597879392&amp;guid=b44bddff0cd295741966a9683b9d454d&amp;type=3#LevelElementUSS" />
     <ui:VisualElement name="LevelElement" class="ui-levelElement" style="justify-content: space-between;">
         <ui:Button display-tooltip-when-elided="true" focusable="false" name="LevelButton" class="ui-button">
             <ui:VisualElement name="LevelImage" class="ui-image" />

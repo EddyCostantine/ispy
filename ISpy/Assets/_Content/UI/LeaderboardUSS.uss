@@ -15,7 +15,6 @@
 }
 
 .ui-button {
-    width: 305px;
     height: 80px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 32px;
@@ -31,21 +30,22 @@
     border-bottom-color: rgba(0, 0, 0, 0.16);
     margin-left: 50px;
     margin-right: 50px;
+    min-width: 305px;
 }
 
 .ui-buttonLabel {
-    font-size: 45px;
+    font-size: 35px;
     -unity-font-definition: none;
-    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-font: url('project://database/Assets/_Content/Fonts/MochiyPopOne-Regular.ttf?fileID=12800000&guid=458b3684c7ea7ac468c5e126eb1537e0&type=3#MochiyPopOne-Regular');
     -unity-text-align: middle-center;
     color: rgb(255, 255, 255);
     text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .ui-Label {
-    -unity-font: url('project://database/Assets/_Content/Fonts/Gaffuk.otf?fileID=12800000&guid=2b5ca9280ad03a344aeb4828815ca783&type=3#Gaffuk');
+    -unity-font: url('project://database/Assets/_Content/Fonts/MochiyPopOne-Regular.ttf?fileID=12800000&guid=458b3684c7ea7ac468c5e126eb1537e0&type=3#MochiyPopOne-Regular');
     -unity-font-definition: none;
-    font-size: 106px;
+    font-size: 85px;
     margin-top: 30px;
     color: rgb(105, 123, 141);
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.24);
@@ -53,9 +53,9 @@
 }
 
 .ui-subText {
-    -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=f876ee6c820a40c429697198b87d00c7&type=3#NotInter-Regular');
+    -unity-font: url('project://database/Assets/_Content/Fonts/MochiyPopOne-Regular.ttf?fileID=12800000&guid=458b3684c7ea7ac468c5e126eb1537e0&type=3#MochiyPopOne-Regular');
     -unity-font-definition: none;
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 10px;
     color: rgb(105, 123, 141);
     text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.24);
