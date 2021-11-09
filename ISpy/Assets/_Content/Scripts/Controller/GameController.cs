@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviourSingleton<GameController>
 {
@@ -155,8 +156,7 @@ public class GameController : MonoBehaviourSingleton<GameController>
     }
     private void UpdateSelectedObject()
     {
-        if (Input.mousePosition.y < 130) return;//HACK new UI system not blocking raycasts.. Dirty hack to save time
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
